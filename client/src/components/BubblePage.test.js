@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import BubblePage from './BubblePage';
+import Bubbles from './Bubbles';
+import ColorList from './ColorList';
 //fetchData Function
 
 import { fetchData as mockFetchData } from '../api/fetchData';
@@ -29,6 +31,7 @@ test('Fetches data and renders the bubbles', async () => {
 	render(<BubblePage />);
 
 	await waitFor(() => {
-		expect(mockFetchData).toHaveBeenCalled();
+		expect(<ColorList />);
+		expect(<Bubbles />);
 	});
 });

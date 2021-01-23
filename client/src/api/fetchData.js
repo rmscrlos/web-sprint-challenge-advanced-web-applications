@@ -1,6 +1,6 @@
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
-export const fetchData = setColorList => {
+export const fetchData = () => {
 	axiosWithAuth()
 		.get('/colors')
 		.then(res => setColorList(res.data))

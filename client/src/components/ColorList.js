@@ -24,8 +24,8 @@ const ColorList = ({ colors, fetchData }) => {
 		axiosWithAuth()
 			.put(`/colors/${colorToEdit.id}`, colorToEdit)
 			.then(res => {
-				fetchData();
 				setEditing(false);
+				fetchData();
 			})
 			.catch(err => console.log(err));
 	};
